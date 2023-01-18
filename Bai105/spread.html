@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Spread Operater</h1>
+    <script>
+        const restaurant = {
+            name: 'Mường Thanh',
+            location: 'Hà Nội , Thanh Hóa , Đà Nẵng',
+            categories: ['VietNam', 'Italian', 'Organic', 'Pizzeria'],
+            starterMenu: ['Focaccia', 'Bruschetta', 'Garlic', 'Bread', 'Salad'],
+            main: ['Pizza', 'Pasta', 'Risotto'],
+        }
+
+        const arr = [7, 8, 9];
+        const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+        console.log(badNewArr)
+
+        const newArr = [1, 2, ...arr];
+        console.log(newArr)
+
+        // copy array
+        const mainMenuCopy = [...restaurant.main , "BBQ"]
+        console.log(mainMenuCopy)
+
+        const menu = [...restaurant.starterMenu,...restaurant.main];
+        console.log(menu)
+
+
+        // Iterables : array , string , map ,sets. NOT objects
+        const name = "Dung"
+        const letter = [...name , ' ', 'S.'];
+        console.log(letter)
+
+        const newRestaurant = { foudedIn : 2003 , ...restaurant , fouded : 'Dung'}
+        console.log(newRestaurant)
+    </script>
+</body>
+
+</html>
