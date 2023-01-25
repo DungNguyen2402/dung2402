@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sets</h1>
+    <script>
+        const orderSets = new Set ([
+            'Pasta',
+            'Pizza',
+            'Pizza',
+            'Risotto',
+            'Pasta',
+            'Pizza',
+        ]);
+        console.log(orderSets)
+        
+        console.log(new Set("Dung"))
+
+        console.log(orderSets.size) // size : tìm xem có bao nhiêu sự khác nhau trong mảng
+
+        // has: kiểm tra xem trong mảng có tồn tại tên mà mình muốn tìm kiếm hay không
+        // nếu có trả về true và ngược lại
+        console.log(orderSets.has('Pizza')) 
+        console.log(orderSets.has('Brate'))
+
+        // Thêm mảng
+        orderSets.add('Bánh mỳ pate')
+        orderSets.add('Bánh mỳ pate')
+
+        // Xóa mảng
+        orderSets.delete('Risotto')
+
+        // Xóa tất cả trong mảng
+        //orderSets.clear()
+
+        console.log(orderSets)
+
+        // lấy giá trị của mảng
+        for (const order of orderSets) console.log(order)
+
+
+        // Example
+
+        const staff = ['nhan vien' ,'boi ban' , 'dau bep','boi ban','nhan vien','dau bep'];
+
+        const staffUnique = [...new Set(staff)]
+        console.log(staffUnique)
+
+        console.log(new Set(['nhan vien' ,'boi ban' , 'dau bep','boi ban','nhan vien','dau bep']).size)
+
+        console.log(new Set('adfgadfgklhop').size)
+
+    </script>
+</body>
+</html>
