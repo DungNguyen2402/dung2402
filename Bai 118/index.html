@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maps</h1>
+    <script>
+        const question = new Map([
+            ['question' , 'Ngôn ngữ lập trình tốt nhất hiện nay trên thế giới là gì?'],
+            [1, 'C'],
+            [2 , 'Java'],
+            [3, 'Javascript'],
+            ['correct', 3],
+            [true , 'congratulation'],
+            [false, 'Try again!'],
+
+        ])
+
+        console.log(question)
+
+        // console.log(Object.entries(openingHours))
+        // const hoursMap = new Map(Object.entries(openingHours))
+
+        // console.log(hoursMap)
+
+
+        // Quiz app
+        console.log(question.get('question'))
+        for (const [key , value] of question) {
+            if (typeof key === "number") {
+                console.log(`Answer ${key}: ${value}`)
+            }
+        }
+        const answer = Number(prompt('Cau tra loi cua ban'));
+        console.log(answer)
+
+        console.log(question.get(question.get('correct') === 'answer'))
+
+        // Convert map to array
+        console.log([...question])
+        console.log(question.entries())
+        console.log([...question.keys()])
+        console.log([...question.values()])
+
+
+    </script>
+</body>
+</html>

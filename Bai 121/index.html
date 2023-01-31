@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Working with string</h1>
+    <script>
+        const airline = 'VietNam Air line';
+        const plane = 'A320';
+
+        console.log(plane[0])
+        console.log(plane[1])
+        console.log(plane[2])
+        console.log('B737'[0])
+
+        console.log(airline.length);
+        console.log('B373'.length);
+
+        console.log(airline.indexOf('e'));
+        console.log(airline.lastIndexOf('e'));
+        console.log(airline.indexOf('line'));
+
+        console.log(airline.slice(7));
+        console.log(airline.slice(7, 10));
+
+        console.log(airline.slice(0, airline.indexOf(' ')));
+        console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+    </script>
+</body>
+</html>

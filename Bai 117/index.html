@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maps</h1>\
+    <script>
+        const rest = new Map();
+        rest.set('name', 'Dung Nguyen');
+        rest.set(1, 'Quang Xuong, Thanh Hoa');
+        console.log(rest.set(2, 'Nam Tu Liem , Ha Noi'));
+
+        rest
+        .set('categories', ['VietNam', 'Italian', 'Organic', 'Pizzeria'])
+        .set('open', 11)
+        .set('close', 23)
+        .set(true, 'We are open:D')
+        .set(false, 'We are close:(');
+
+        console.log(rest.get('name'))
+        console.log(rest.get(true))
+        console.log(rest.get(1))
+
+        const time = 21;
+        console.log(rest.get(time > rest.get('open') && time < rest.get('close') ));
+        
+    </script>
+</body>
+</html>
